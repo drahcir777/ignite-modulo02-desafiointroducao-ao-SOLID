@@ -14,8 +14,10 @@ class TurnUserAdminUseCase {
     if (!user) {
       throw new Error("User already exist!");
     }
-    const userAdmin = this.usersRepository.turnAdmin(user)
-    return userAdmin
+
+    const admin = this.usersRepository.turnAdmin(user);
+
+    return admin
   }
 }
 
